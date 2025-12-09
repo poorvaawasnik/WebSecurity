@@ -17,7 +17,15 @@ public class LoginSecurityConfig {
                 .password("{noop}12345")
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(user1);
+        UserDetails user2 = User.withUsername("sumit")
+                   .password("{noop}12345")
+                    .roles("EMPLOYEE")
+                .build();
+        UserDetails user3 = User.withUsername("admin")
+                .password("{noop}admin")
+                .roles("ADMIN")
+                .build();
+        return new InMemoryUserDetailsManager(user1,user2,user3);
 
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
@@ -7,5 +7,7 @@
 <body>
 <h1> Welcome to Spring Security</h1>
 <hr>
+<p><b>User Name: </b><span th:text="${#authentication.name}"></span></p>
+<p><b>Role: </b><span th:text="${#authentication.authorities[0]}"></span></p>
 </body>
 </html>

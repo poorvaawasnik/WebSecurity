@@ -1,6 +1,7 @@
 package com.example.websecurity.controller;
 
 
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MyController {
     @RequestMapping("/")
     public  String index(){
+
+
         return  "index";
     }
 
