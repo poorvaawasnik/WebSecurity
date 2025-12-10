@@ -20,4 +20,9 @@ public class MyController {
     public  String about(){
         return "About Page";
     }
+
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
 }
